@@ -87,8 +87,4 @@ if __name__ == '__main__':
     template = 'test.tpl'
     make_file = render(yaml_file, template)
     make_file.to_file('testrender.txt', verbose='yes')
-    #print make_file.show_values()
-    #print make_file.list_data_vars()
-    #print make_file.validate()
-    #print make_file.to_stdout()
 
