@@ -1,0 +1,8 @@
+ceilometer:
+    DEFAULT:
+        name: ceilometer
+        verbose: False
+        transport_url: "rabbit://openstack:password@${API_IP}:5672/"
+    keystone_authtoken:
+        auth_uri: "http://${API_IP}/identity"
+        auth_url: "http://${API_IP}/identity_admin"

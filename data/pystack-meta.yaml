@@ -1,0 +1,85 @@
+---
+keystone:
+  data: keystone.yaml
+  config:
+    api:
+      template: keystone.j2
+      file: etc/keystone/keystone.conf
+nova:
+  data: nova.yaml
+  config:
+    api:
+      template: nova-controller.j2
+      file: etc/nova/nova.conf
+glance:
+  data: glance.yaml
+  config:
+    api:
+      template: glance-api.j2
+      file: etc/glance/glance-api.conf
+    registry:
+      template: glance-registry.j2
+      file: etc/glance/glance-registry.conf
+cinder:
+  data: cinder.yaml
+  config:
+    api:
+      template: cinder.j2
+      file: etc/cinder/cinder.conf
+neutron:
+  data: neutron.yaml
+  config:
+    api:
+      template: neutron.j2
+      file: etc/neutron/neutron.conf
+    dhcp:
+      template: dhcp_agent.j2
+      file: etc/neutron/dhcp_agent.ini
+    l3:
+      template: l3_agent.j2
+      file: etc/neutron/l3_agent.ini
+    lbaas:
+      template: lbaas_agent.j2
+      file: etc/neutron/lbaas_agent.ini
+    metadata:
+      template: metadata_agent.j2
+      file: etc/neutron/metadata_agent.ini
+    ml2:
+      template: ml2.j2
+      file: etc/neutron/plugins/ml2/ml2_conf.ini
+    openvswitch:
+      template: openvswitch.j2
+      file: etc/neutron/plugins/ml2/openvswitch_agent.ini
+dashboard:
+  data: dashboard.yaml
+  config:
+    api:
+      template: dashboard.j2
+      file: etc/openstack-dashboard/local_settings
+ceilometer:
+  data: ceilometer.yaml
+  config:
+    api:
+      template: ceilometer-controller.j2
+      file: etc/ceilometer/ceilometer.conf
+    pipeline:
+      template: pipeline-controller.j2
+      file: etc/ceilometer/pipeline.yaml
+aodh:
+  data: aodh.yaml
+  config:
+    api:
+      template: aodh.j2
+      file: etc/aodh/aodh.conf
+heat:
+  data: heat.yaml
+  config:
+    api:
+      template: heat.j2
+      file: etc/heat/heat.conf
+murano:
+  data: murano.yaml
+  config:
+    api:
+      template: murano.j2
+      file: etc/murano/murano.conf
